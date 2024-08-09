@@ -1,0 +1,165 @@
+html, body {
+    position: fixed;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.button {
+    border: 0;
+    padding: 10px 15px;
+    line-height: 1;
+    font-size: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.screen {
+    display: none;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.screen.active {
+    display: block;
+}
+
+#dartboard #areas path,
+#dartboard #areas #Bull {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+#dartboard #areas path:hover,
+#dartboard #areas #Bull:hover {
+    fill: rgb(10, 121, 233);
+}
+
+.screen-title {
+    margin: 20px;
+    line-height: 1;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.screen-launch #launch-continue-button {
+    margin: 10px;
+    background-color: rgb(10, 121, 233);
+    color: #fff;
+}
+
+.screen-add-players #add-players-name-field {
+    border: 0;
+    padding: 10px 15px;
+    line-height: 1;
+    font-size: 15px;
+    margin: 10px 5px 10px 10px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 4px;
+    color: #fff;
+}
+.screen-add-players #add-players-submit-button {
+    margin: 10px 10px 10px 5px;
+    background-color: rgb(45, 45, 45);
+    color: #fff;
+}
+.screen-add-players #add-players-start-button {
+    margin: 10px;
+    background-color: rgb(10, 121, 233);
+    color: #fff;
+}
+.screen-add-players #add-players-start-button:disabled {
+    cursor: not-allowed;
+    background-color: rgb(224, 224, 227);
+    color: rgb(79, 79, 81);
+}
+
+.screen-dartboard {
+    text-align: center;
+}
+.screen-dartboard #board-player-score,
+.screen-dartboard #board-current-hits {
+    margin: 10px;
+    line-height: 1;
+    font-size: 15px;
+    height: 15px;
+}
+.screen-dartboard #board-confirm-button {
+    margin: 10px;
+    background-color: rgb(10, 121, 233);
+    color: #fff;
+    transition: all .2s ease-in-out;
+}
+.screen-dartboard #board-confirm-button:disabled {
+    cursor: not-allowed;
+    background-color: rgb(224, 224, 227);
+    color: rgb(79, 79, 81);
+}
+.screen-dartboard #board-miss-button {
+    margin: 10px;
+    background-color: rgb(236, 55, 55);
+    color: #fff;
+}
+.screen-dartboard #board-wrong-button {
+    margin: 10px;
+    background-color: rgb(45, 45, 45);
+    color: #fff;
+}
+.screen-dartboard #dartboard {
+    margin: 20px 0;
+    max-width: 100vw;
+    max-height: calc(100vh - 395px);
+}
+
+.screen-dartboard #board-leaderboard-button,
+.screen-leaderboard #leaderboard-dartboard-button {
+    margin: 10px;
+    background-color: rgb(10, 121, 233);
+    color: #fff;
+}
+.screen-leaderboard #leaderboard-dartboard-button:disabled {
+    cursor: not-allowed;
+    background-color: rgb(224, 224, 227);
+    color: rgb(79, 79, 81);
+}
+
+.screen-leaderboard {
+    text-align: center;
+}
+.screen-leaderboard .leaderboard-table-wrapper {
+    width: 100%;
+    height: calc(100vh - 175px);
+    overflow: auto;
+}
+.screen-leaderboard .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.screen-leaderboard #leaderboard-header-row {
+    border-bottom: 1px solid #333;
+}
+.screen-leaderboard .leaderboard-table th,
+.screen-leaderboard .leaderboard-table td {
+    padding: 5px 10px;
+}
+.screen-leaderboard .leaderboard-table th {
+    width: 290px;
+}
+.screen-leaderboard .leaderboard-table th:first-child {
+    width: 80px;
+}
+.screen-leaderboard .leaderboard-table td:first-child {
+    border-right: 1px solid #333;
+    background-color: rgb(242, 242, 242);
+}
+
+.screen-leaderboard #leaderboard-reset-button {
+    margin: 10px;
+    background-color: rgb(236, 55, 55);
+    color: #fff;
+}

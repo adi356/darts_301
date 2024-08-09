@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="icon" href="/img/dartboard-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/img/dartboard-64.png" sizes="64x64" type="image/png">
+    <link rel="apple-touch-icon" href="/img/dartboard-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/img/dartboard-180.png" sizes="180x180">
+    <link rel="apple-touch-icon" href="/img/dartboard-167.png" sizes="167x167">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="light">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Darts League 301</title>
+</head>
+<body>
+    <div class="screen screen-launch active">
+        <h1 class="screen-title">Darts League 301</h1>
+        <p>
+            Made by <a href="https://github.com/adi356">Andrew Irvine</a>.
+        </p>
+        <button class="button" id="launch-continue-button">Continue</button>
+        <p>
+            Dartboard graphic by <a href="http://djave.co.uk/">djave</a> (<a href="/dartboard/dartboard_license.md">license</a>).
+        </p>
+    </div>
+
+    <div class="screen screen-add-players">
+        <h1 class="screen-title">Add players</h1>
+
+        <div id="add-players-list"></div>
+
+        <form id="add-player-form" method="post">
+            <input type="text" name="name" placeholder="Name" id="add-players-name-field">
+            <button class="button" type="submit" id="add-players-submit-button">Add</button>
+        </form>
+
+        <button class="button" id="add-players-start-button" disabled>Start</button>
+    </div>
+
+    <div class="screen screen-dartboard">
+        <h1 class="screen-title" id="dartboard-title"></h1>
+        <div id="board-player-score">142</div>
+        <div id="board-current-hits">Double 15, Single 7, Miss</div>
+        <button class="button" id="board-confirm-button">Confirm</button>
+
+        <div id="dartboard-container"></div>
+        <div><button class="button" id="board-miss-button">Miss</button></div>
+        <div><button class="button" id="board-wrong-button">Undo Throw</button></div>
+        <div><button class="button" id="board-leaderboard-button">Leaderboard</button></div>
+    </div>
+
+    <div class="screen screen-leaderboard">
+        <h1 class="screen-title">Leaderboard</h1>
+
+        <button class="button" id="leaderboard-dartboard-button">Dartboard</button>
+
+        <div class="leaderboard-table-wrapper">
+            <table class="leaderboard-table">
+                <thead>
+                    <tr id="leaderboard-header-row"></tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                </tbody>
+            </table>
+        </div>
+
+        <button class="button" id="leaderboard-reset-button">Reset</button>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
